@@ -10,7 +10,6 @@ import ansumanaCV from './images/ansumanaCV.pdf';
 import AnsuD from './images/AnsuD.png';
 import './App.css';
 
-const key = process.env.REACT_APP_GitHubKey
 
 class App extends Component {
 
@@ -22,6 +21,7 @@ class App extends Component {
     homeName: 'Ansumana',
     job: 'Frontend Web Developer | React.js | Node.js',
     email: 'ansumana.d@yahoo.com',
+    bio: 'Berlin',
     menuBar: [
       { endPoint: 'Home', faIcon: 'fas fa-home' },
       { endPoint: 'About', faIcon: 'fas fa-user' },
@@ -36,12 +36,6 @@ class App extends Component {
     ],
 
 
-    enterpriseGitHub: 'devugees',
-    githubData: {
-      profileName: 'anamusna',
-      githubPict: null,
-      bio: null,
-    },
     projectsID: [155543450, 163668160, 158218706, 161310391, 150238636],
     menu: 'Home',
     width: null,
@@ -55,9 +49,9 @@ class App extends Component {
       case ('About'):
         whatToRender = (
           <About
-            githubName={this.state.githubData.githubName}
+            profileName={this.state.name}
             profilePict={AnsuD}
-            bio={this.state.githubData.bio}
+            bio={this.state.bio}
             socialMedia={[...this.state.socialMedia]}
             email={this.state.email}
             ansumanaCV={ansumanaCV}
@@ -70,7 +64,7 @@ class App extends Component {
       case ('Projects'):
         whatToRender = (
           <Work
-            githubName={this.state.githubData.githubName}
+            profileName={this.state.name}
 
 
           />)
@@ -89,28 +83,9 @@ class App extends Component {
     }
     return whatToRender
   }
-  fetchAsync = async () => {
-    try {
-      const result = await fetch(`https://api.github.com/users/${this.state.githubData.githubName}?client_id= 36986708&client_secret=${key}`);
-      const data = await result.json();
-      this.setState(
-        {
-          githubData: {
-            githubPict: data.avatar_url,
-            bio: data.bio,
-            githubName: data.login,
-          }
-        }
-      )
-    } catch (error) {
-      console.log('Error', error);
-    }
-  }
-
 
   // this will execute before render()
   componentDidMount() {
-    this.fetchAsync();
     this.setState({ width: window.innerWidth });
   }
 
