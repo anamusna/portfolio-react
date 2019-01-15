@@ -1,5 +1,4 @@
 import React from 'react';
-import { RenderWork } from './RenderWork';
 
 const key = process.env.REACT_APP_GitHubKey
 

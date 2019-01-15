@@ -1,14 +1,18 @@
 import React from 'react';
+import Typing from 'react-typing-animation';
 export default class Home extends React.Component {
 
   render() {
     return (
       <React.Fragment>
-        <section className="home bg-transparent  App">
-          <div className="container">
-            <h1>{`I'm ${this.props.name},`}</h1>
-            <h3>{this.props.job}</h3>
-          </div>
+        <section className="home bg-transparent">
+          <Typing className="title">
+            <div className="center">
+              <h1>{`I'm ${this.props.name}`}</h1> <br />
+              <Typing.Delay ms={1000} />
+              <h6>{this.props.job}</h6>
+            </div>
+          </Typing>
           <div className="hire-me">
             <a onClick={() => this.props.changeMenu('Contact')}>CONTACT ME LETS TALK</a>
           </div>

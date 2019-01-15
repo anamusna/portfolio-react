@@ -1,28 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 .App {
+  flex: 1;
   text-align: center;
-  background-color: pink;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -32,14 +16,14 @@
   }
 }
 
+body {
+  margin: 0;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 
 :root {
-  --dark: #262627;
-  --darker: #181818;
-  --light: #fff;
-  --yellow: #FED766;
+  --light: chfff;
   /*80px is 24px from footer and 56px from navbar*/
   --stickyFooter: calc(100vh - 80px);
   --headerHeight: 200px;
@@ -47,25 +31,30 @@
 
 
 /* Basic Setup*/
+
+
 #root{
 
-
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-color: var(--light );
-  color: var(--dark);
+
 }
+
 
 a {
   text-decoration: none;
-  color: var(--dark);
 }
 
 a:hover,
 a:link {
-  color: var(--yellow);
+  color: var(--green);
   text-decoration: none;
   cursor: pointer;
 }
@@ -84,81 +73,77 @@ a:link {
 }
 
 
-
-
-
 /* Home Page */
 
+.border-bottom{
+  background-color: #333;
+}
 .home {
-  padding-top: 100px;
-  grid-template-columns: 1fr 0.5fr;
-  grid-template-rows: 50px 1fr 0.2fr 0.5fr;
+align-content: center;
+justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5px 1fr 0.2fr 0.5fr;
   grid-template-areas: ".... ...." "title ..." "hire-me hire-me" "social-icons social-icons";
 }
-
+.center{
+  margin: auto ;
+  
+}
 .title {
+  width: 100%; 
   grid-area: title;
-  margin: auto;
-  padding: 0 2rem;
+  margin: 2rem 17rem;
+  padding: 0 1rem;
+  text-align: center;
+  text-align: center !important;
 }
-
 .title h1 {
-  width: 100%;
-  font-size: 4rem;
+  font-size: 3rem;
 }
-
 .title h6 {
-  margin-bottom: 2rem;
   font-size: 1.5rem;
 }
+
 
 .hire-me {
   grid-area: hire-me;
   margin: auto;
+
 }
 
 .hire-me a {
-  border: 2px solid var(--orange);
+  border: 2px solid #f2f2f2;
   padding: 1rem 2.5rem;
   border-radius: 1.3rem;
+  color: white;
+
 }
 
 .hire-me a:hover {
   background-color: var(--green);
-  color: var(--darker);
+  color: white;
 }
 
 .social-icons {
   grid-area: social-icons;
   margin: auto;
   font-size: 4em;
+text-align: center;
+align-content: center;
 }
 .social-icons a {
-  color: var(--dark);
+  color: #ccc;
+text-decoration: none !important;
 }
+
 
 .social-icons a:hover {
-  color: var(--green);
-}
-
-
-.home::after {
-  content: "";
-  background-image: url("./images/AnsuD.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-  opacity: 0.25;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+  color: green;
 }
 
 /* About Page */
 .about {
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: auto auto 1fr;
   grid-template-areas:
   "about-h1 ..."
@@ -183,20 +168,40 @@ a:link {
 
 .pict-wrapper {
   margin: auto;
-  
   grid-area: pict-wrapper;
-  height: 300px;
-  width: 300px;
-  border: 1px solid var(--darker);
-  border-radius: 50%;
-  overflow: hidden;
-  
+  height: 30vw;
+  width: 30vh;
+  border: 1px solid #ccc;
 }
 
-.github-picture {
+.pict-wrapper img {
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-attachment: fixed;
   background-size: cover;
+}
+
+/*TECH*/
+.skillsSection svg {
+  width: 21rem;
+  height: 13rem;
+  padding-top: 5rem;
+  position: relative;
+}
+.tech-stack h1{
+  padding-top: 2rem;
+}
+.skillsSection {
+
+  text-align: center;
+padding: auto;
+ border: 1px solid #ccc;
+
+}
+
+.lg_break {
+  width: 0;
 }
 
 
@@ -277,11 +282,11 @@ a:link {
 color: tomato;
 }
 .contact-text Button {
-  background-color: var(--green);
-  color: var(--darker);
-  border-color: var(--darker);
+  background-color: green;
+  color: #fff;
+  border-color: #ccc;
 }
-
+ 
 
 .google-map {
   grid-area: google-map;
@@ -378,11 +383,6 @@ footer a {
     grid-template-columns: 1fr 0.5fr;
     grid-template-rows: 0.05fr auto 0.5fr 0.1fr;
   }
-
-  .home::after {
-    background-image: url("./images/AnsuD.png");
-    left: 500px;
-  }
   .title h1 {
     width: 100%;
     font-size: 4rem;
@@ -397,22 +397,12 @@ footer a {
 
 @media (max-width: 1200px) {
 
-  .home::after {
-    grid-template-columns: 1fr;
-    background-image: url("./images/AnsuD.png");
-    left: 500px;
-  }
   .fourZeroFour{
     font-size: 35rem;
   }
 }
 
 @media (max-width: 992px) {
-
-  .home::after {
-    background-image: url("./images/AnsuD.png");
-    left: 300px;
-  }
   .contact {
   grid-gap: 1rem;
   grid-template-columns: 1fr;
@@ -435,10 +425,6 @@ footer a {
 
 @media (max-width: 768px) {
 
-  .home::after {
-    background-image: url("./images/AnsuD.png");
-    left: 0;
-  }
   .about {
   grid-template-columns: 1fr;
   grid-template-rows: 1rem 0.1fr 0.4fr auto;
@@ -467,12 +453,6 @@ footer a {
 }
 
 @media (max-width: 576px) {
-
-  .home::after {
-    width: 100%;
-    background-image: url("./images/AnsuD.png");
-    left: 0;
-  }
 
   .home {
   display: grid;

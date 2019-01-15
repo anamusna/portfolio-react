@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ansumanaCV from './images/ansumanaCV.pdf';
 import AnsuD from './images/AnsuD.png';
+import 'bootstrap/dist/css/bootstrap.css';
+
 import './App.css';
 
 
@@ -42,12 +44,12 @@ class App extends Component {
   }
 
 
-
   whatToRender = () => {
     let whatToRender
     switch (this.state.menu) {
       case ('About'):
         whatToRender = (
+
           <About
             profileName={this.state.name}
             profilePict={AnsuD}
@@ -59,13 +61,14 @@ class App extends Component {
           />)
         break;
       case ('Tech'):
-        whatToRender = (<TechStack />)
+        whatToRender = (<TechStack
+          projectsID={this.state.projectsID}
+        />)
         break;
       case ('Projects'):
         whatToRender = (
           <Work
             profileName={this.state.name}
-
 
           />)
         break;
@@ -75,6 +78,7 @@ class App extends Component {
       default:
         whatToRender = (
           <Home
+
             job={this.state.job}
             name={this.state.nickname}
             changeMenu={this.changeMenu}
@@ -96,6 +100,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+
         <div className="App">
           <Menu
             nickname={this.state.name}
@@ -105,6 +110,7 @@ class App extends Component {
           />
           {this.whatToRender()}
           <Footer />
+
         </div>
 
       </React.Fragment>

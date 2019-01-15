@@ -17,7 +17,6 @@ export default class Menu extends React.Component {
       this.toggle()
     }
   }
-
   render() {
     return (
       <React.Fragment>
