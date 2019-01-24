@@ -11,3 +11,6 @@ footer {
   footer a {
     color: var(--orange);
   }
+  .fa-heart{
+    color: red;
+  }
