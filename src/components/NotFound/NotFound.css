@@ -1,0 +1,62 @@
+.not-found {
+    z-index: 30;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr auto 0.1fr auto 1fr;
+    grid-template-areas:
+    "...."
+    "notfoundh1"
+    "notfoundh3"
+    "notfoundh6"
+    "social-icons";
+  }
+  .not-found h1 {
+    z-index: 30;
+    margin: auto;
+    grid-area: notfoundh1;
+  }
+  
+  .not-found h3 {
+    z-index: 30;
+    margin: auto;
+    grid-area: notfoundh3;
+  }
+  .not-found h6 {
+    z-index: 30;
+    margin: auto;
+    grid-area: notfoundh6;
+  }
+  
+  .not-found h6 a {
+    color:  var(--orange);
+  }
+  .fourZeroFour{
+    color: rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+    position: absolute;
+    display: grid;
+    user-select: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas:
+    "... ... ... ... ..."
+    "... four zero for ..."
+    "... ... ... ... ...";
+    font-size: 40rem;
+  }
+  .four{
+    margin: auto;
+    grid-area: four;
+  }
+  
+  .zero {
+    margin: auto;
+    grid-area: zero;
+  }
+  
+  .for{
+    margin: auto;
+   grid-area: for;
+  }
+  
+

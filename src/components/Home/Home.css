@@ -1,0 +1,106 @@
+.border-bottom{
+  background-color: #333;
+}
+.home {
+align-content: center;
+justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5px 1fr 0.2fr 0.5fr;
+  grid-template-areas: ".... ...." "title ..." "hire-me hire-me" "social-icons social-icons";
+}
+.center{
+  margin: auto ;
+  text-align: center;
+}
+.title {
+  justify-content: center;
+  width: 100%; 
+  grid-area: title;
+  margin: 2rem 18vw;
+  padding: 2rem;
+  text-align: center !important;
+}
+.title h1 {
+  font-size: 3rem;
+}
+.title h6 {
+  font-size: 1.5rem;
+}
+
+
+.hire-me {
+  grid-area: hire-me;
+  margin: auto;
+
+}
+
+.hire-me a {
+  border: 2px solid #f2f2f2;
+  padding: 1rem 2.5rem;
+  border-radius: 1.3rem;
+  color: white;
+
+}
+
+.hire-me a:hover {
+  background-color: var(--green);
+  color: white;
+}
+.social-icons{
+  grid-area: social-icons;
+  margin: 10px;
+  font-size: 2em;
+text-align: center;
+align-content: center;
+
+}
+
+
+.social-icons a {
+
+  text-align: center;
+  margin: 5px;
+  align-self: center;
+  transition: 0.5s;
+text-decoration: none !important;
+}
+.social-icons a .fa-github {
+  color: #f2f2f2;
+ }
+
+ .social-icons a .fa-facebook-f {
+  color: #4267b2;
+ }
+ .social-icons a .fa-linkedin-in {
+  color: #0077B5;
+ }
+
+ .social-icons a .fa-twitter {
+  color: #38A1F3;
+ }
+ .social-icons a .fa-instagram {
+  color:  #bc2a8d;
+ }
+.social-icons a svg:hover {
+ color: var(--green);
+}
+
+
+@media (max-width: 1370px) {
+
+  .home {
+    width: 100%;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 0.05fr auto 0.5fr 0.1fr;
+  }
+  .title h1 {
+    width: 100%;
+    font-size: 4rem;
+    line-height: 100%;
+  }
+
+  .title h6 {
+    padding: 1rem 0;
+    margin: 0;
+  }
+}

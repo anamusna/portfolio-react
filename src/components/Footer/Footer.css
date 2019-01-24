@@ -1,0 +1,13 @@
+footer {
+    text-align: center;
+    height: 40px;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: auto;
+  }
+  
+  footer a {
+    color: var(--orange);
+  }

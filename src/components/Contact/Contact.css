@@ -1,0 +1,64 @@
+.contact {
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1rem 1fr 1fr 0.5fr;
+    grid-template-areas:
+    ".. .."
+    "contact-text google-map "
+    "contact-text google-map "
+    ;
+    padding-top: 2em;
+  }
+  .contact-text {
+    grid-area: contact-text;
+    padding-top: 2em;
+  }
+
+  .contact-text Button {
+    background-color: green;
+    color: #fff;
+    border-color: #ccc;
+  }
+   
+  
+  .google-map {
+    grid-area: google-map;
+    width: 100%;
+    height: 500px;
+  }
+  
+  .social {
+    padding: 2em auto;
+  text-align: center;
+  align-content: center;
+  }
+  
+  .social a {
+    font-size: 2em;
+    text-align: center;
+    margin: auto 10px;
+    align-content: center;
+    align-self: center;
+  text-decoration: none !important;
+  }
+  
+  .social a .fa-github {
+    color: #f2f2f2;
+   }
+  
+   .social a .fa-facebook-f {
+    color: #4267b2;
+   }
+   .social a .fa-linkedin-in {
+    color: #0077B5;
+   }
+  
+   .social a .fa-twitter {
+    color: #38A1F3;
+   }
+   .social a .fa-instagram {
+    color:  #bc2a8d;
+   }
+  .social a svg:hover {
+   color: var(--green);
+  }
