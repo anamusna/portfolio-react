@@ -15,10 +15,10 @@ export default class Home extends React.Component {
 
           </Typing>
           <div className="hire-me">
-            <a onClick={() => this.props.changeMenu('Contact')}>CONTACT ME LETS TALK</a>
+            <button onClick={() => this.props.changeMenu('Contact')}> CONTACT ME LETS TALK</button>
           </div>
           <div className="social-icons">
-            {this.props.socialMedia.map((social, index) => <a key={index} href={social.url} target="_blank"><i className={social.faIcon}></i> </a>)}
+            {this.props.socialMedia.map((social, index) => <a key={index} href={social.url} target="_blank" rel="noopener noreferrer"><i className={social.faIcon}></i> </a>)}
           </div>
         </section>
       </React.Fragment>

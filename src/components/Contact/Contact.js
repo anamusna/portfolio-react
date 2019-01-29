@@ -32,7 +32,7 @@ export default class Contact extends React.Component {
           </div>
           <GoogleMaps />
           <div className="social">
-            {this.props.socialMedia.map((social, index) => <a key={index} href={social.url} target="_blank"><i className={social.faIcon}></i> </a>)}
+            {this.props.socialMedia.map((social, index) => <a key={index} href={social.url} target="_blank" rel="noopener noreferrer"><i className={social.faIcon}></i> </a>)}
           </div>
         </section>
       </React.Fragment>

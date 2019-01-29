@@ -12,10 +12,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import './App.css';
 
-
+const key = process.env.REACT_APP_GitHubKey
 class App extends Component {
-
-
 
   state = {
     name: 'Ansumana Darboe',
@@ -50,7 +48,12 @@ class App extends Component {
       { url: '#', techIcon: 'fab fa-css3' },
       { url: '#', techIcon: 'fab fa-sass' },
     ],
-
+    enterpriseGitHub: 'devugees',
+    githubData: {
+      githubName: 'anamusna',
+      githubPict: null,
+      bio: null,
+    },
     projectsID: [
       155543450,
       163668160,
@@ -58,11 +61,28 @@ class App extends Component {
       161310391,
       150238636
     ],
+
+
     menu: 'Home',
     width: null,
   }
 
-
+  fetchAsync = async () => {
+    try {
+      const result = await fetch(`https://api.github.com/users/${this.state.githubData.githubName}?client_id=a12b6d5ca6b666061f3a&client_secret=${key}`);
+      const data = await result.json();
+      this.setState(
+        {
+          githubData: {
+            bio: data.bio,
+            githubName: data.login,
+          }
+        }
+      )
+    } catch (error) {
+      console.log('Error', error);
+    }
+  }
   whatToRender = () => {
     let whatToRender
     switch (this.state.menu) {
@@ -87,8 +107,9 @@ class App extends Component {
       case ('Projects'):
         whatToRender = (
           <Work
-
-
+            githubName={this.state.githubData.githubName}
+            enterpriseGitHub={this.state.enterpriseGitHub}
+            projectsID={this.state.projectsID}
           />)
         break;
       case ('Contact'):

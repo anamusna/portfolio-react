@@ -17,7 +17,7 @@ export default class About extends React.Component {
           </div>
           <hr />
           <div className="social-media">
-            {this.props.socialMedia.map((social, index) => <a key={index} href={social.url} target="_blank"><i className={social.faIcon}></i> </a>)}
+            {this.props.socialMedia.map((social, index) => <a key={index} href={social.url} target="_blank" rel="noopener noreferrer"><i className={social.faIcon}></i> </a>)}
           </div>
 
         </div>
@@ -33,7 +33,7 @@ export default class About extends React.Component {
             I firmly believe in life long learning and I'm constantly exploring new concepts and technologies. I tend to code things from scratch and enjoy bringing ideas to life in the browser.
         </p>
           <br />
-          <h5> <a href={this.props.ansumanaCV} target="_blank">Click to view my CV</a></h5><br />
+          <h5> <a href={this.props.ansumanaCV} target="_blank" rel="noopener noreferrer">Click to view my CV</a></h5><br />
           <h4>Want to know more? <a href={`mailto:${this.props.email}`}>Email me</a>.</h4>
         </div>
       </section>

@@ -11,6 +11,7 @@
     "work-4 work-5";
     padding-top: 2rem;
     padding-bottom: 1rem;
+     justify-content: space-around;
   }
   .work h1 {
     grid-area: workh1;

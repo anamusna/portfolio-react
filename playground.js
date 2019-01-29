@@ -1,30 +1,57 @@
-const { Map: LeafletMap, TileLayer, Marker, Popup } = ReactLeaflet
+import React, { Component } from "react";
 
-class SimpleExample extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            lat: 51.505,
-            lng: -0.09,
-            zoom: 13
-        }
-    }
+import Tags from ".././elements/Tags";
 
-    render() {
-        const position = [this.state.lat, this.state.lng];
-        return (
-            <LeafletMap center={position} zoom={this.state.zoom}>
-                <TileLayer
-                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-                />
-                <Marker position={position}>
-                    <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-                </Marker>
-            </LeafletMap>
-        );
-    }
+const Modal = ({ handleClose, show, title, description }) => {
+  const showHideClassName = show ? "modal display-block" : "modal display-none";
+  return (
+    <div id={title} className={showHideClassName} onClick={handleClose}>
+      <div className="modal__content">
+        <button className="modal__close" onClick={handleClose}>
+          close
+        </button>
+        <h3 className="modal__heading">{title}</h3>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+};
+
+export default class Skill extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+
+  showModal = () => {
+    document.body.style.overflowY = "hidden";
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    document.body.style.overflowY = "auto";
+    this.setState({ show: false });
+  };
+
+  render() {
+    let skill = this.props.list;
+    return (
+      <div className="skills__item">
+        <figure>
+          <img className="img-center" src={skill.imgSrc} alt={skill.name} />
+        </figure>
+        <p className="skills__text">{skill.slogan}</p>
+        <Tags tags={skill.tags} />
+        <a className="skills__more" onClick={this.showModal}>
+          +
+        </a>
+        <Modal
+          show={this.state.show}
+          title={skill.name}
+          description={skill.description}
+          handleClose={this.hideModal}
+        />
+      </div>
+    );
+  }
 }
-
