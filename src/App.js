@@ -55,11 +55,27 @@ class App extends Component {
       bio: null,
     },
     projectsID: [
+      153275708,
       155543450,
+      160353893,
       163668160,
-      158218706,
+      164642776,
       161310391,
-      150238636
+      150238636,
+      164108179,
+      162260957,
+      161653734,
+      161033353,
+      157391772,
+      156709144,
+      155860976,
+      154473847,
+      154472751,
+      154472207,
+      154471254,
+      154458886,
+      163220718,
+      158187437,
     ],
 
 
@@ -69,7 +85,7 @@ class App extends Component {
 
   fetchAsync = async () => {
     try {
-      const result = await fetch(`https://api.github.com/users/${this.state.githubData.githubName}?client_id=a12b6d5ca6b666061f3a&client_secret=${key}`);
+      const result = await fetch(`https://api.github.com/users/${this.state.githubData.githubName}?client_id= 6e5cd7b5f80da5576dd742cfbee01ad0e5727cc6&client_secret=${key}`);
       const data = await result.json();
       this.setState(
         {

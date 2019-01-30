@@ -1,13 +1,14 @@
 import React from 'react';
+import './Work.css'
 import { Card, Button, CardHeader, CardFooter, CardBody, CardText } from 'reactstrap';
 
 export const RenderWork = props => {
   let liveDemo;
-  if(props.liveURL){
+  if (props.liveURL) {
     liveDemo = (<Button href={props.liveURL} target="_blank">Live Demo</Button>)
   }
   return (
-    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }} className={`work-${props.index}`}>
+    <Card id="card" body inverse className={`work-${props.index}`}>
       <CardHeader tag="h3">{props.name}</CardHeader>
       <CardBody>
         <CardText>{props.description}</CardText>

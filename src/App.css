@@ -128,7 +128,18 @@ a:link {
 
 
 @media (max-width: 768px) {
-
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1rem 1fr 0.2fr 0.5fr;
+    grid-template-areas:
+    ".... "
+    "title"
+    "hire-me"
+    "social-icons";
+    }
+  
+  
   .about {
   grid-template-columns: 1fr;
   grid-template-rows: 1rem 0.1fr 0.4fr auto;
@@ -148,7 +159,25 @@ a:link {
   "work-2"
   "work-3"
   "work-4"
-  "work-5";
+  "work-5"
+  "work-6"
+  "work-7"
+  "work-8"
+  "work-9"
+  "work-10"
+  "work-11"
+  "work-12"
+  "work-13"
+  "work-14"
+  "work-15"
+  "work-16"
+  "work-17"
+  "work-18"
+  "work-19"
+  "work-20"
+  "work-21"
+  "work-22"
+  "work-23";
   }
   .pict-wrapper {
     margin: auto;
@@ -172,14 +201,7 @@ a:link {
     font-size: 1.5em;
     margin: auto 5px;
   }
-  .title {
-    width: 100%; 
-    grid-area: title;
-    margin: 1rem 13rem;
-    padding: 0 1rem;
-    text-align: center;
-    text-align: center !important;
-  }
+
   .title h1 {
     font-size: 2rem;
   }
@@ -198,24 +220,24 @@ a:link {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
 
   .home {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1rem 1fr 0.2fr 0.5fr;
-  grid-template-areas:
-  ".... "
-  "title"
-  "hire-me"
-  "social-icons";
-  }
-
-  .title {
-    grid-area: title;
-    margin: auto;
-    padding: 0 1rem;
-  }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1rem 1fr 0.2fr 0.5fr;
+    grid-template-areas:
+    ".... "
+    "title"
+    "hire-me"
+    "social-icons";
+    }
+  
+    .title {
+      grid-area: title;
+      margin: auto;
+      padding: 0 1rem;
+    }
 
   .fourZeroFour{
   margin: 0 auto;
