@@ -15,7 +15,7 @@ export const RenderWork = props => {
         <Button href={props.link} target="_blank">Repository</Button>
         {liveDemo}
       </CardBody>
-      <CardFooter className="text-muted">Owner: <a href={props.ownerURL} target="_blank">{props.owner}</a></CardFooter>
+      <CardFooter className="text-muted">Owner: <a href={props.ownerURL} rel="noopener noreferrer" target="_blank">{props.owner}</a></CardFooter>
     </Card>
   );
 }
