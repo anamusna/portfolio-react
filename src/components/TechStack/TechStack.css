@@ -1,23 +1,19 @@
-.tech-stack{
-    justify-content: space-around;
-  }
-  .tech-stack h1{
-    padding-top: 2rem;
-  }
-  .skillsSection {
-   margin: auto;
-  
-  }
-  .skillsSection a{
-  text-align: center;
-  padding: 2rem;
+.tech-stack {
+	justify-content: space-around;
+}
+.tech-stack h1 {
+	padding-top: 2rem;
+}
+.skillsSection {
+	margin: auto;
+}
 
-  }
-  
-  .skillsSection  svg{
-    margin: 5px auto;
-    font-size: 10rem;
-    box-shadow: 0px 4px 10px 4px rgba(19, 35, 47, 0.4);
-    position: relative;
- padding: 20px;
-  }
+.tech-stack iframe {
+	text-align: center;
+	padding: 2rem;
+	width: 90vw;
+	height: 600px;
+	border: 1px solid var(--dark);
+	border-radius: .8rem;
+	overflow: hidden;
+}

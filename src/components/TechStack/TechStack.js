@@ -1,24 +1,24 @@
-import React, { Component } from "react";
-import './TechStack.css'
+import React, { Component } from 'react';
+import './TechStack.css';
 
 class TechStack extends Component {
-
-
-  render() {
-    return (
-      <section className="tech-stack">
-        <h1>My Tech Stack</h1>
-        <div className="skillsSection tech-stack-text">
-          {this.props.tech.map((social, index) =>
-            <a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
-              <i className={social.techIcon} ></i>
-            </a>)}
-
-
-        </div>
-      </section>
-    );
-  }
+	render() {
+		return (
+			<section className="tech-stack">
+				<h1>My Tech Stack</h1>
+				<div className="tech-stack-text">
+					<iframe
+						title="Ansumana Tech Stack"
+						frameborder="0"
+						data-theme="dark"
+						data-layers="1,2,3,4"
+						data-stack-embed="true"
+						src="https://embed.stackshare.io/stacks/embed/de10647ba6ddd727aad7055fca4326"
+					/>
+				</div>
+			</section>
+		);
+	}
 }
 
 export default TechStack;

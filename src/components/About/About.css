@@ -1,43 +1,35 @@
 .about {
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas:
-    "about-h1 ..."
-    "social-icons aboutme-text"
-    ".. ..";
-    padding: 1rem;
-  }
-  
-  
-  .about h1 {
-    grid-area: about-h1;
-  }
-  
-  .aboutme-text {
-    margin:  auto;
-    grid-area: aboutme-text;
-  }
-  
-  .aboutme-text a {
-    color: var(--green);
-  }
-  
-  .pict-wrapper {
-    margin: 3rem auto;
-    grid-area: pict-wrapper;
-    height: 20vw;
-    width: 30vh;
-  }
-  
-  .pict-wrapper img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: auto auto 1fr;
+	grid-template-areas: "about-h1 ..." "social-icons aboutme-text" ".. ..";
+	padding: 1rem;
+}
 
-  
-  
+.about h1 {
+	grid-area: about-h1;
+}
+
+.aboutme-text {
+	margin: auto;
+	grid-area: aboutme-text;
+}
+
+.aboutme-text a {
+	color: var(--green);
+}
+
+.pict-wrapper {
+	margin: 3rem auto;
+	grid-area: pict-wrapper;
+	height: 20vw;
+	width: 30vh;
+}
+
+.pict-wrapper img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-attachment: fixed;
+	background-size: cover;
+}
