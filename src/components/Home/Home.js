@@ -7,20 +7,20 @@ export default class Home extends React.Component {
 			<React.Fragment>
 				<section className="App home bg-transparent">
 					<Typing className="title center">
-						<h1 className="center">{`I'm ${this.props.name}`}</h1> <br />
+						<h4 className="center">{`${this.props.name}`}</h4> <br />
 						<Typing.Delay ms={1000} />
 						<h6>{this.props.job}</h6>
 					</Typing>
-					<div className="hire-me">
-						<button onClick={() => this.props.changeMenu('Contact')}> CONTACT ME LETS TALK</button>
+					<div className="hire-me App">
+						<button onClick={() => this.props.changeMenu('Contact')}>CONTACT ME</button>
 					</div>
-					<div className="social-icons">
+					{/* 	<div className="social-icons">
 						{this.props.socialMedia.map((social, index) => (
 							<a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
 								<i className={social.faIcon} />{' '}
 							</a>
 						))}
-					</div>
+					</div> */}
 				</section>
 			</React.Fragment>
 		);

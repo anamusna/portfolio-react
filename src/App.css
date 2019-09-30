@@ -3,10 +3,18 @@
 .App {
 	flex: 1;
 	text-align: center;
-	color: #fff;
+	width: 100%;
+	height: 100%;
+	/* overflow-x: scroll; */
+	/* overflow-y: visible; */
+}
+.main {
+	position: absolute;
 	width: 100vw;
-	height: 100vh;
-	overflow-x: hidden;
+	overflow-x: visible;
+	margin-top: 10vh;
+	overflow-y: visible;
+	height: 100%;
 }
 @keyframes App-logo-spin {
 	from {
@@ -38,12 +46,8 @@ body {
 	flex-wrap: wrap;
 }
 
-body {
-	font-family: 'Ubuntu', sans-serif;
-}
-
 a {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 a:hover,
@@ -137,7 +141,11 @@ a:link {
 		grid-template-rows: 1rem 0.1fr 0.4fr auto;
 		grid-template-areas: "..." "about-h1" "social-icons" "aboutme-text";
 	}
+
 	.work {
+		padding-top: 1rem;
+		margin: auto;
+		grid-gap: 1.7rem;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto auto 1fr 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas: "workh1" "work-text" "work-0" "work-1" "work-2" "work-3" "work-4" "work-5" "work-6"
@@ -145,11 +153,15 @@ a:link {
 			"work-18" "work-19" "work-20" "work-21" "work-22" "work-23";
 	}
 
+	.pict-wrapper img {
+		height: 100%;
+		width: 50vw;
+	}
 	.pict-wrapper {
-		margin: 2rem auto;
+		margin: auto;
 		grid-area: pict-wrapper;
 		height: 100%;
-		width: 30vh;
+		width: 50vw;
 	}
 	.skillsSection a {
 		text-align: center;
@@ -162,9 +174,18 @@ a:link {
 	.fourZeroFour {
 		font-size: 20rem;
 	}
-	.social a,
-	.social-icons {
-		font-size: 1.5em;
+	.social-media {
+		font-size: 1.3rem;
+	}
+	.aboutme-text p {
+		text-align: center;
+	}
+
+	.social-media a {
+		margin: auto 5px;
+	}
+	.social a {
+		font-size: 1rem;
 		margin: auto 5px;
 	}
 
@@ -174,11 +195,12 @@ a:link {
 		margin: auto;
 		padding: 0 1rem;
 	}
-	.title h1 {
-		font-size: 2.5rem;
+
+	.title h4 {
+		font-size: 1.3rem;
 	}
 	.title h6 {
-		font-size: 1rem;
+		font-size: 0.9rem;
 	}
 
 	.contact-text h2 {

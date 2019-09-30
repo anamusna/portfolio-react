@@ -7,29 +7,31 @@ export default class About extends React.Component {
 		return (
 			<section className="about">
 				<div className="social-icons">
-					<h1>About Me</h1>
+					{/* <h1>About Me</h1> */}
 					<div className="pict-wrapper">
 						<img className="profile-picture" src={this.props.profilePict} alt={this.props.nickname} />
 					</div>
 					<hr />
-					<div className="social-media">
+					{/* 	<div className="social-media">
 						{this.props.socialMedia.map((social, index) => (
 							<a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
 								<i className={social.faIcon} />{' '}
 							</a>
 						))}
-					</div>
+					</div> */}
 				</div>
+
 				<div className="aboutme-text">
+					{/* <br />
 					<Typing>
 						<div>
 							<h3>{this.props.profileName}</h3>
 						</div>
-					</Typing>
+					</Typing> */}
 					<br />
 					<p>
 						{' '}
-						A front-end web developer with an eye for design and a strong desire to learn and create ideas
+						I am a Full-Stack Developer with an eye for design and a strong desire to learn and create ideas
 						into reality.
 					</p>
 					<p>
@@ -40,9 +42,9 @@ export default class About extends React.Component {
 					<br />
 					<h5>
 						{' '}
-						<a href={this.props.ansumanaCV} target="_blank" rel="noopener noreferrer">
+						{/* <a href={this.props.ansumanaCV} target="_blank" rel="noopener noreferrer">
 							Click to view my CV
-						</a>
+						</a> */}
 					</h5>
 					<br />
 					<h4>

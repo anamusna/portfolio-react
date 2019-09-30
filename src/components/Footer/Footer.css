@@ -1,16 +1,55 @@
 footer {
-    text-align: center;
-    height: 40px;
-    width: 100%;
-  }
-  
-  footer p {
-    margin: auto;
-  }
-  
-  footer a {
-    color: var(--orange);
-  }
-  .fa-heart{
-    color: red;
-  }
+	text-align: center;
+	height: 10vh;
+	width: 100vw;
+}
+
+footer p {
+	margin: auto;
+}
+
+footer a {
+	color: black;
+}
+/* .fa-heart {
+	color: red;
+}
+ */
+
+.social-media {
+	margin: auto;
+	font-size: 1.5rem;
+	text-align: center;
+	align-content: center;
+}
+
+.social-icons a {
+	text-align: center;
+	margin: 5px;
+	align-self: center;
+	transition: 0.5s;
+	text-decoration: none !important;
+}
+.social-icons a .fa-github {
+	color: #f2f2f2;
+}
+
+.social-media a .fa-facebook-f {
+	color: #4267b2;
+}
+.social-media a .fa-linkedin-in {
+	color: #0077b5;
+}
+
+.social-media a .fa-twitter {
+	color: #38a1f3;
+}
+.social-media a .fa-instagram {
+	color: #bc2a8d;
+}
+.social-media a svg:hover {
+	color: var(--green);
+}
+.social-media a .fa-github {
+	color: black;
+}

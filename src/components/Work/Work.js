@@ -31,7 +31,7 @@ export default class Work extends React.Component {
 	findProjects = (data, id) => {
 		//  console.log(data)
 		data.map((repo) => {
-			console.log(repo);
+			/* console.log(repo); */
 			if (id === repo.id) {
 				this.setState((prevState) => {
 					return {
@@ -69,12 +69,12 @@ export default class Work extends React.Component {
 		return (
 			<React.Fragment>
 				<section className="work">
-					<h1>My Expertise</h1>
+					<h1>Expertise</h1>
 					<div className="work-text">
 						<p>
-							I built some SPA (Single Page Applications) using HTML5,CSS3, JS (ES6, ES7) with React or
-							JQuery as front-end libraries and with Node.js and Express as back-end engine with MySQL or
-							MongoDB for storing data.
+							I built a number of applications with RESTful Api's using JavaScript(ES6), React or React
+							Native, HTML5, CSS3 and jQuery as frontend libraries and on Node.js and Express.js as
+							backend engines in combination with MongoDB or MySQL for data storage.
 						</p>
 					</div>
 					{this.state.projects.map((project, index) => (

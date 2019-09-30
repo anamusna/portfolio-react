@@ -22,7 +22,7 @@
 	height: 500px;
 }
 
-.social {
+/* .social {
 	padding: 2em auto;
 	text-align: center;
 	align-content: center;
@@ -35,10 +35,6 @@
 	align-content: center;
 	align-self: center;
 	text-decoration: none !important;
-}
-
-.social a .fa-github {
-	color: #f2f2f2;
 }
 
 .social a .fa-facebook-f {
@@ -57,3 +53,7 @@
 .social a svg:hover {
 	color: var(--green);
 }
+
+.social a .fa-github {
+	color: black;
+} */
